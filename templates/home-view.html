@@ -1,7 +1,31 @@
-<title>{title}</title>
+{% extends "base.html" %} {% block content %}
+<title>{{ title }}</title>
 <h1>OK I PULL UP</h1>
-<p>New player entered the game: {name}</p>
-<p>Random number, cause fuck you that's why: {number}</p>
-<h3>This data is pulled from my ass (id: {id})</h3>
-<p>Title: {title}</p>
-<p>Content: {content}</p>
+<p>New player entered the game: {{ name }}</p>
+<p>Random number, cause fuck you that's why: {{ number }}</p>
+<h3>This data is pulled from my ass (id: {{ id }})</h3>
+<p>Title: {{ title }}</p>
+<p>Content: {{ content }}</p>
+<p>Arabic Cats: {{ arabic_cats }}</p>
+
+<ul>
+  {% for cat in arabic_cats %}
+    <li>{{ cat }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for item in object_list %}
+    <li>{{ item }} </li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for item in object_list %}
+    {% if item.title %}
+        <li><a href="/inventory/{{ item.id }}/">{{ item.title }}. <b>Response:</b> {{ item.content }} </li>
+    {% endif %}
+  {% endfor %} 
+</ul>
+
+{% endblock content %}
