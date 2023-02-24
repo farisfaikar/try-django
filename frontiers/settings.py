@@ -29,6 +29,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# > when u wamnna update installed apps, type this
+# `python manage.py makemigrations`
+# `python manage.py migrate`
+# > do dis over and over until u die
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'inventory',
 ]
 
 MIDDLEWARE = [
