@@ -59,7 +59,9 @@ ROOT_URLCONF = 'frontiers.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'D:\Faris-Projects\Programming\WebDev\try-django\templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
