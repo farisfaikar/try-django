@@ -4,3 +4,4 @@ from django.db import models
 class Inventory(models.Model):
     title = models.TextField()
     content = models.TextField()
+    important_number = models.IntegerField()

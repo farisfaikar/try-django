@@ -16,7 +16,6 @@ def home_view(request, *args, **kwargs):
     > ???
     > profit
     """
-    print(id)
     name = "Muhammad Sumbul"  # hard coded like your head
     number = random.randint(69, 420)  # API call to some bullshit rest API with python
     random_id = random.randint(1, 5)
@@ -43,6 +42,7 @@ def home_view(request, *args, **kwargs):
         "number": number,
         "arabic_cats": arabic_cats,
         "object_list": inventory_queryset,
+        "important_number": inventory_obj.important_number,
     }
 
     # Django Template
