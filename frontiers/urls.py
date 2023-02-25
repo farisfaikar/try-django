@@ -21,6 +21,7 @@ from .views import home_view
 
 urlpatterns = [
     path('', home_view),  # index/home/root/your mom
+    path('inventory/', views.inventory_search_view),
     path('inventory/<int:id>/', views.inventory_detail_view),
     path('admin/', admin.site.urls),
 ]
